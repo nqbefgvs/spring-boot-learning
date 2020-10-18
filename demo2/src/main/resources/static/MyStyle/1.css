@@ -1,0 +1,126 @@
+h1{
+    color: #001357;
+    text-align: center;
+}
+h2{
+    outline-color: #6ad5f0;
+    outline-style: auto;
+    text-align: center; 
+    padding: 45px 0;
+    margin-bottom: 40px;
+}
+h3{
+    background-color: cornflowerblue;
+    text-align: center;
+}
+textarea{
+}
+button{
+    padding: 15px 32px;
+    border: 0cm;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.input1{
+    /* display: block; */
+    width: 20%;
+    height: 34px;
+    padding: 6px 12px;
+}
+
+.button1{
+
+}
+
+.list{
+    /* margin: 20; */
+    background-color: #000;
+}
+
+ul{
+    color: rgb(202, 245, 202); 
+}
+
+ul.left{
+    list-style: none;
+}
+
+ul.left li{
+    float: left;
+    /* display: list-item; */
+    background-color: rgb(202, 245, 202); 
+    width: 100px;
+    height: 50px;
+}
+
+ul.left li a{
+    font-size: larger;
+    display: block;
+    text-decoration: none;
+    width: 100px;
+    line-height: 50px;
+    /* vertical-align: middle; */
+    text-align: center;
+    /* background-color: lightslategray; */
+}
+
+a:hover{
+    color: rgb(64, 140, 240);
+}
+
+div.rightlist{
+    position: absolute;
+    right: 50px;
+    /* padding-left: 0%; */
+}
+
+ul.right{
+    list-style: none;
+}
+
+ul.right li{
+    /* height: 20px; */
+    /* margin-bottom: 0px; */
+    font-size: 18px;
+    border-bottom: 1px solid rgb(105, 100, 100);
+}
+
+ul.right li a{
+    /* line-height: 100px; */
+    color: rgb(183, 156, 235);
+    text-decoration: none;
+}
+
+ul.right li a:hover{
+    color: rgb(214, 82, 82);
+}
+
+.dialog{
+    clear: both;
+    position: relative;
+    left: 50px;
+    width: 10%;
+    margin-bottom: 20px;
+}
+
+.dialog span{
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.dialog .date{
+    font-size: 30px;
+    /* font-weight: 50; */
+    background: #F77B6F;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+
+.dialog .month{
+    font-size: 20px;
+    background: #f6f5f0;
+    color: #a19fa2;
+    border-radius: 0 0 4px 4px;
+}

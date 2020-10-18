@@ -1,0 +1,36 @@
+﻿<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <form th:action="@{/addemp}" method="post">
+            <div>
+                <label>LastName</label>
+                <input type="text" name="lastName">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <label>Gender</label>
+                <div>
+                    <input type="radio" name="gender" value="1">
+                    <label>男</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" value="2">
+                    <label>女</label>
+                </div>
+            </div>
+            <div>
+                <label>department</label>
+                <select name="department.id">
+                    <option th:each="dept:${departments}" th:text="${dept.getDepartmentName()}" th:value="${dept.getId()}">1</option>
+                </select>
+            </div>
+            <div>
+                <label>Birth</label>
+                <input type="text" name="birth">
+            </div>
+            <button type="submit">add</button>
+        </form>
+    </body>
+</html>

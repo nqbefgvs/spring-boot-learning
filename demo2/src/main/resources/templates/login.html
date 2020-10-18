@@ -1,0 +1,18 @@
+﻿<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <link rel="stylesheet" th:href="@{MyStyle/3.css}"/>
+    <head>
+
+    </head>
+    <body>
+        <div class="at-center">
+            <form th:action="@{/tologin}">
+                <p style="color: #ff0000" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"/>
+                <input type="text" name="UserName" th:placeholder="#{username}" class="input-block">
+                <br>
+                <input type="password" name="Password" th:placeholder="#{password}" class="input-block">
+                <br>
+                <button type="submit" class="submit-button">提交</button>
+            </form>
+        </div>
+    </body>
+</html>

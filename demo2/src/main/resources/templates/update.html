@@ -1,0 +1,38 @@
+﻿<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form th:action="@{/updateEmp}" method="post">
+    <input type="hidden" name="id" th:value="${emp.getId()}">
+    <div>
+        <label>LastName</label>
+        <input type="text" name="lastName" th:value="${emp.getLastName()}">
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" name="email" th:value="${emp.getEmail()}">
+    </div>
+    <div>
+        <label>Gender</label>
+        <div>
+            <input type="radio" name="gender" value="1" th:checked="${emp.getGender()==1}">
+            <label>男</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="2"th:checked="${emp.getGender()==0}">
+            <label>女</label>
+        </div>
+    </div>
+    <div>
+        <label>department</label>
+        <select name="department.id">
+            <option th:each="dept:${departments}" th:selected="${dept.getId()==emp.getDepartment().getId()}"
+                    th:text="${dept.getDepartmentName()}" th:value="${dept.getId()}">1</option>
+        </select>
+    </div>
+    <div>
+        <label>Birth</label>
+        <input type="text" name="birth" th:value="${emp.getBirth()}">
+    </div>
+    <button type="submit">add</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html xmls:th="http://www.thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/html">
+    <link rel="stylesheet" th:href="@{MyStyle/2.css}"/>
+    <head>
+
+    </head>
+    <body>
+        <div class="top">
+            <h1>
+                struct1
+            </h1>
+<!--            <a style="position: absolute; right: 120px; padding: 10px 10px" th:text="中文" th:href="@{/index.html(l='zh_CN')}"/>-->
+<!--            <a style="position: absolute; right: 30px; padding: 10px 10px" th:text="English" th:href="@{/index.html(l='en_US')}"/>-->
+        </div>
+        <div class="block-row">
+            <div class="list1">
+                <div>
+                    <ul>
+                        <li>
+                            <a th:text="#{msg1}"></a>
+                        </li>
+                        <li>
+                            <a style="font-size: x-large" th:href="@{/index.html(l='zh_CN')}">转换为中文</a>
+                        </li>
+                        <li>
+                            <a style="font-size: x-large" th:href="@{/index.html(l='en_US')}">translate to English</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list2">
+                <div class="block">
+                    <h2>title1</h2>
+                    <p>This is the first text.</p>
+                </div>
+                <div class="block">
+                    <h2>title2</h2>
+                    <p>This is the second text.</p>
+                </div>
+            </div>
+            <div class="list3">
+                <div>
+                    <div id="myimg">
+                        <img th:src="@{MyImage/my.png}" alt="icon show failure" style="    border: 1px solid rgb(221, 219, 219);">
+                    </div>
+                    <div class="row">
+                        <a href="">name</a>
+                        <a href="">alias</a>
+                    </div>
+                    <div class="row">
+                        <a th:href="login.html">home</a>
+                        <a href="">stars</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="foot-er">
+            <div class="block-row">
+                <div class="footlist1">
+                    <h1 class="footh1">Please contact with me</h1>
+                    <h2 class="footh2">we can both help each other</h2>
+                </div>
+                <div class="footlist2">
+                    <a class="foot-row" href="">google</a>
+                    <a class="foot-row" href="">tencent</a>
+                    <a class="foot-row" href="">facebook</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

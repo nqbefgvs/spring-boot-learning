@@ -1,0 +1,48 @@
+﻿<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div>
+    <h3>The Employee List</h3>
+    <a th:href="@{/toAdd}">add employee</a>
+</div>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>lastName</th>
+            <th>email</th>
+            <th>gender</th>
+            <th>department</th>
+            <th>birth</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="emp:${emps}">
+            <td th:text="${emp.getId()}"></td>
+            <td th:text="${emp.getLastName()}"></td>
+            <td th:text="${emp.getEmail()}"></td>
+            <td th:text="${emp.getGender()==0?'女':'男'}"></td>
+            <td th:text="${emp.department.getDepartmentName()}"></td>
+            <td th:text="${emp.getBirth()}"></td>
+            <td>
+                <a th:href="@{/update/}+${emp.getId()}">edit</a>
+                <a th:href="@{/delemp/}+${emp.getId()}">delete</a>
+            </td>
+        </tr>
+        </tbody>
+<!--        <tfoot>-->
+<!--        <tr>-->
+<!--            <th>id</th>-->
+<!--            <th>lastName</th>-->
+<!--            <th>email</th>-->
+<!--            <th>gender</th>-->
+<!--            <th>department</th>-->
+<!--            <th>birth</th>-->
+<!--            <th>action</th>-->
+<!--        </tr>-->
+<!--        </tfoot>-->
+    </table>
+</div>
+</body>
+</html>
