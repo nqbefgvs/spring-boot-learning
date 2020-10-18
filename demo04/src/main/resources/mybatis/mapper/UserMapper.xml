@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo04.mapper.UserMapper">
+<!--    <select id="selectBlog" resultType="Blog">-->
+<!--        select * from Blog where id = #{id}-->
+<!--    </select>-->
+    <select id="queryUserList" resultType="User"> <!--useCache="true"-->
+        select * from user
+    </select>
+    <select id="queryUserById" resultType="User">
+        select * from user where id = #{id}
+    </select>
+    <insert id="addUser" parameterType="User">
+        insert into user values (#{id}, #{name}, #{pwd}, #{perms})
+    </insert>
+    <update id="updateUser" parameterType="User">
+        update set name = #{name}, pwd = #{pwd} where id = #{id}
+    </update>
+    <delete id="deleteUser" parameterType="int">
+        delete from user where id = #{id}
+    </delete>
+</mapper>
